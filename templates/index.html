@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cervical Cancer Risk Prediction</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f6f8;
+            text-align: center;
+            padding-top: 30px;
+        }
+        input {
+            padding: 7px;
+            margin: 5px;
+            width: 320px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>ML-Based Cervical Cancer Risk Prediction</h2>
+
+<form action="/predict" method="post">
+
+<input name="Age" placeholder="Age" required><br>
+<input name="Number of sexual partners" placeholder="Number of sexual partners" required><br>
+<input name="First sexual intercourse" placeholder="Age at first sexual intercourse" required><br>
+<input name="Num of pregnancies" placeholder="Number of pregnancies" required><br>
+
+<input name="Smokes" placeholder="Smokes (0/1)" required><br>
+<input name="Smokes (years)" placeholder="Years of smoking" required><br>
+
+<input name="Hormonal Contraceptives" placeholder="Hormonal Contraceptives (0/1)" required><br>
+<input name="Hormonal Contraceptives (years)" placeholder="Years using contraceptives" required><br>
+
+<input name="IUD" placeholder="IUD (0/1)" required><br>
+<input name="IUD (years)" placeholder="Years using IUD" required><br>
+
+<input name="STDs" placeholder="Any STDs (0/1)" required><br>
+<input name="STDs (number)" placeholder="Number of STDs" required><br>
+
+<input name="STDs:condylomatosis" placeholder="Condylomatosis (0/1)" required><br>
+<input name="STDs:cervical condylomatosis" placeholder="Cervical Condylomatosis (0/1)" required><br>
+<input name="STDs:vaginal condylomatosis" placeholder="Vaginal Condylomatosis (0/1)" required><br>
+<input name="STDs:vulvo-perineal condylomatosis" placeholder="Vulvo-perineal Condylomatosis (0/1)" required><br>
+<input name="STDs:syphilis" placeholder="Syphilis (0/1)" required><br>
+<input name="STDs:pelvic inflammatory disease" placeholder="Pelvic Inflammatory Disease (0/1)" required><br>
+<input name="STDs:genital herpes" placeholder="Genital Herpes (0/1)" required><br>
+<input name="STDs:molluscum contagiosum" placeholder="Molluscum Contagiosum (0/1)" required><br>
+<input name="STDs:AIDS" placeholder="AIDS (0/1)" required><br>
+<input name="STDs:HIV" placeholder="HIV (0/1)" required><br>
+<input name="STDs:Hepatitis B" placeholder="Hepatitis B (0/1)" required><br>
+<input name="STDs:HPV" placeholder="HPV (0/1)" required><br>
+
+<button type="submit">Predict Risk</button>
+
+</form>
+
+<h3 style="color:red;">{{ prediction_text }}</h3>
+
+</body>
+</html>
